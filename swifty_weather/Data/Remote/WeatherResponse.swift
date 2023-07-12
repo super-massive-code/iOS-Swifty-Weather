@@ -20,6 +20,7 @@ struct Location: Decodable {
 struct Current: Decodable {
     let last_updated_epoch: Int
     let temp_c: Float
+    let wind_mph: Float
     let condition: Condition
 }
 

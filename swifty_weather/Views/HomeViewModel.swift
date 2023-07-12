@@ -10,15 +10,13 @@ import Foundation
 
 @MainActor class HomeViewModel: ObservableObject {
     
-    @Published var location: String = ""
-    @Published var temperature: String = ""
+    @Published var dto: WeatherForcastDTO = WeatherForcastDTO.empyty()
     
     init(locationRepo: LocationRepo = LocationRepo(),
          weatherRepo: WeatherRepo = WeatherRepo()) {
         
-        weatherRepo.getForcastForPostcode(postCode: locationRepo.usersPostcode()) { result in
-            self.location = result.location
-            self.temperature = result.currentTemp
+        weatherRepo.getForcastForPostcode(postCode: locationRepo.usersPostcode()) { dto in
+            self.dto = dto
         }
     }    
 }

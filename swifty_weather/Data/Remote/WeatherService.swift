@@ -16,7 +16,7 @@ class WeatherService {
         urlComponents?.queryItems = [
             URLQueryItem(name: "key", value: Secrets.weatherApiKey),
             URLQueryItem(name: "days", value: "1"),
-            URLQueryItem(name: "api", value: "no"),
+            URLQueryItem(name: "aqi", value: "no"),
             URLQueryItem(name: "alerts", value: "no"),
             URLQueryItem(name: "q", value: postcode)
         ]

@@ -13,11 +13,9 @@ struct HomeView: View {
     
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text(viewModel.location)
-            Text(viewModel.temperature)
+            Text(viewModel.dto.location).font(.headline)
+            AsyncImage(url: URL(string: viewModel.dto.iconUrl), scale: 1)
+            Text("Wind Speed: " + viewModel.dto.windSpeed)
         }
         .padding()
     }
