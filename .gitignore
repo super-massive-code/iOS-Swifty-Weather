@@ -37,3 +37,4 @@ timeline.xctimeline
 playground.xcworkspace
 
 .build/
+swifty_weather/secrets.swift
