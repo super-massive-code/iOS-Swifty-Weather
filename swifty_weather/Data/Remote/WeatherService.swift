@@ -9,10 +9,10 @@ import Foundation
 
 class WeatherService {
     
-    private let baseUrl = "https://api.weatherapi.com/v1/forecast.json"
+    private let baseUrl = "https://api.weatherapi.com/v1/"
     
     func getForcast(postcode: String, completion: @escaping (WeatherResponse) -> ()) {
-        let urlComponents = NSURLComponents(string: baseUrl)
+        let urlComponents = NSURLComponents(string: baseUrl + "forecast.json")
         urlComponents?.queryItems = [
             URLQueryItem(name: "key", value: Secrets.weatherApiKey),
             URLQueryItem(name: "days", value: "1"),
