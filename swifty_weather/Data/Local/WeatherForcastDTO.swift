@@ -19,17 +19,9 @@ struct WeatherForcastDTO {
         return WeatherForcastDTO(location: "", currentTemp: "", windSpeed: "", description: "", iconUrl: "")
     }
     
-    static func fromRemoteApiResponse(response: WeatherResponse) -> WeatherForcastDTO {
-        
-        let location: String
-        if (response.location.name == response.location.region) {
-            location = response.location.name
-        } else {
-           location = "\(response.location.name), \(response.location.region)"
-        }
-        
+    static func fromRemoteApiResponse(response: WeatherResponse) -> WeatherForcastDTO {        
         return WeatherForcastDTO(
-            location: location,
+            location: response.location.name,
             currentTemp: "\(String(describing: response.current.temp_c))°",
             windSpeed: "\(String(describing: response.current.wind_mph)) mph",
             description: response.current.condition.text,

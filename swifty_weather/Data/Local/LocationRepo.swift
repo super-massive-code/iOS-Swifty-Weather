@@ -12,7 +12,7 @@ import Foundation
 class LocationRepo {
 
     func usersPostcode() -> String {
-        return "SW1W 0AE"
+        return "DN1 1AB"
     }    
 }
 

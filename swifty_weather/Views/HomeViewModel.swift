@@ -7,6 +7,12 @@
 
 import Foundation
 
+/**
+ TODO:
+ Share weather?
+ Tab's at bottom with forcast - selectable to show detail?
+ */
+
 
 @MainActor class HomeViewModel: ObservableObject {
     
