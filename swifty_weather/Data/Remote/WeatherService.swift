@@ -15,7 +15,7 @@ class WeatherService {
         let urlComponents = NSURLComponents(string: baseUrl + "forecast.json")
         urlComponents?.queryItems = [
             URLQueryItem(name: "key", value: Secrets.weatherApiKey),
-            URLQueryItem(name: "days", value: "1"),
+            URLQueryItem(name: "days", value: "7"),
             URLQueryItem(name: "aqi", value: "no"),
             URLQueryItem(name: "alerts", value: "no"),
             URLQueryItem(name: "q", value: postcode)

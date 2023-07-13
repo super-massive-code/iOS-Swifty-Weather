@@ -19,6 +19,7 @@
 		C3444F0E2A5C3DD100AA378B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3444F0D2A5C3DD100AA378B /* HomeView.swift */; };
 		C3444F102A5C3DD200AA378B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3444F0F2A5C3DD200AA378B /* Assets.xcassets */; };
 		C3444F132A5C3DD200AA378B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3444F122A5C3DD200AA378B /* Preview Assets.xcassets */; };
+		C3E0BBC42A60028400DF4F53 /* WeatherForecastDTOFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E0BBC32A60028400DF4F53 /* WeatherForecastDTOFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		C3444F0D2A5C3DD100AA378B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C3444F0F2A5C3DD200AA378B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3444F122A5C3DD200AA378B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C3E0BBC32A60028400DF4F53 /* WeatherForecastDTOFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastDTOFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				C33ED42B2A5C89C00049448D /* LocationRepo.swift */,
 				C33ED4312A5D51E40049448D /* WeatherRepo.swift */,
 				C33ED4332A5E9CFA0049448D /* WeatherForcastDTO.swift */,
+				C3E0BBC32A60028400DF4F53 /* WeatherForecastDTOFactory.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				C33ED42E2A5C8C730049448D /* WeatherResponse.swift in Sources */,
 				C33ED4342A5E9CFA0049448D /* WeatherForcastDTO.swift in Sources */,
 				C33ED4322A5D51E40049448D /* WeatherRepo.swift in Sources */,
+				C3E0BBC42A60028400DF4F53 /* WeatherForecastDTOFactory.swift in Sources */,
 				C33ED4302A5D51AF0049448D /* HomeViewModel.swift in Sources */,
 				C33ED4252A5C4AE40049448D /* secrets.swift in Sources */,
 				C33ED4222A5C46BA0049448D /* WeatherService.swift in Sources */,

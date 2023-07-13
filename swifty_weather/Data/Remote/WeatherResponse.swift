@@ -10,6 +10,7 @@ import Foundation
 struct WeatherResponse: Decodable {
     let location: Location
     let current: Current
+    let forecast: Forecast
 }
 
 struct Location: Decodable {
@@ -26,4 +27,20 @@ struct Current: Decodable {
 struct Condition: Decodable {
     let text: String
     let icon: String
+}
+
+struct Forecast: Decodable {
+    let forecastday: [ForcastDay]
+}
+
+struct ForcastDay: Decodable {
+    let date_epoch: Int
+    let day: Day
+}
+
+struct Day: Decodable {
+    let maxtemp_c: Float
+    let mintemp_c: Float
+    let maxwind_mph: Float
+    let condition: Condition
 }
