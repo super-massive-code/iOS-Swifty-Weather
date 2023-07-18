@@ -18,20 +18,11 @@ class WeatherRepo {
     //TODO: cache results
     func getForcastForPostcode(postCode: String, callback: @escaping (_ result: WeatherForcastDTO) -> (Void)) {
         if (Secrets.weatherApiKey.isEmpty) {
-            callback(WeatherForecastDTOFactory().fromRemoteApiResponse(response: loadTestResponse()))
+            callback(WeatherForecastDTOFactory().fromRemoteApiResponse(response: JsonLoader.loadCannedApiResponse(bundle: Bundle.main, fileName: "forecast")))
         } else {
-            callback(WeatherForecastDTOFactory().fromRemoteApiResponse(response: loadTestResponse()))
             remoteService.getForcast(postcode: postCode) { weatherResponse in
                 callback(WeatherForecastDTOFactory().fromRemoteApiResponse(response: weatherResponse))
             }
         }
-    }
-    
-    private func loadTestResponse() -> WeatherResponse {
-        let decoder = JSONDecoder()
-        let url = Bundle.main.url(forResource: "forecast", withExtension: "json")!
-        let data = try! Data(contentsOf: url)
-        let weather = try! decoder.decode(WeatherResponse.self, from: data)
-        return weather
     }
 }

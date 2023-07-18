@@ -9,19 +9,11 @@ import Foundation
 
 struct WeatherResponse: Decodable {
     let location: Location
-    let current: Current
     let forecast: Forecast
 }
 
 struct Location: Decodable {
     let name: String
-}
-
-struct Current: Decodable {
-    let last_updated_epoch: Int
-    let temp_c: Float
-    let wind_mph: Float
-    let condition: Condition
 }
 
 struct Condition: Decodable {

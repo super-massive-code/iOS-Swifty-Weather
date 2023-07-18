@@ -31,5 +31,5 @@ import Foundation
     
     func selectDay(day: DayDTO) {
         self.selectedDay = day
-    }
+    }     
 }

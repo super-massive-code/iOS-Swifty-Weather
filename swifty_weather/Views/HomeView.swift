@@ -22,11 +22,16 @@ struct HomeView: View {
                     Spacer()
                 }
                 HStack {
-                    VStack {
+                    VStack(alignment: .leading) {
                         Text(viewModel.selectedDay.name)
                             .font(.system(size: 25, weight: .ultraLight))
                             .foregroundColor(.white)
-                        AsyncImage(url: viewModel.selectedDay.iconUrl, scale: 1)
+                        AsyncImage(url: viewModel.selectedDay.iconUrl) { image in
+                            image.resizable()
+                                .frame(width: 200, height: 200)
+                        } placeholder: {
+                            ProgressView().progressViewStyle(.circular)
+                        }
                     }
                     Spacer()
                     VStack(alignment: .trailing) {
